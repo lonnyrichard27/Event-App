@@ -1,50 +1,247 @@
 {
-    "events": [
-      {
-        "id": 5928101,
-        "user": {
-          "id": "abc123",
-          "name": "Adam"
-        },
-        "category": "animal welfare",
-        "organizer": "Adam",
-        "title": "Cat Cabaret",
-        "description": "Yay felines!",
-        "location": "Meow Town",
-        "date": "2019-01-03T21:54:00.000Z",
-        "time": "2:00",
-        "attendees": []
+  "events": [
+    {
+      "id": 5928101,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
       },
-      {
-        "id": 8419988,
-        "user": {
-          "id": "abc123",
-          "name": "Adam"
-        },
-        "category": "animal welfare",
-        "organizer": "Adam",
-        "title": "Kitty Cluster",
-        "description": "Yay cats!",
-        "location": "Catlandia",
-        "date": "2019-01-31T22:09:00.000Z",
-        "time": "7:00",
-        "attendees": []
+      "category": "animal welfare",
+      "organizer": "Adam",
+      "title": "Cat Cabaret",
+      "description": "Yay felines!",
+      "location": "Meow Town",
+      "date": "2019-01-03T21:54:00.000Z",
+      "time": "2:00",
+      "attendees": []
+    },
+    {
+      "id": 8419988,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
       },
-      {
-        "id": 4582797,
-        "user": {
-          "id": "abc123",
-          "name": "Adam"
-        },
-        "category": "animal welfare",
-        "organizer": "Adam",
-        "title": "Puppy Parade",
-        "description": "Yay pups!",
-        "location": "Puptown ",
-        "date": "2019-02-02T23:27:00.000Z",
-        "time": "1:00",
-        "attendees": []
-      }
-    ]
-  }
-  
+      "category": "animal welfare",
+      "organizer": "Adam",
+      "title": "Kitty Cluster",
+      "description": "Yay cats!",
+      "location": "Catlandia",
+      "date": "2019-01-31T22:09:00.000Z",
+      "time": "7:00",
+      "attendees": []
+    },
+    {
+      "id": 4582797,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "animal welfare",
+      "organizer": "Adam",
+      "title": "Puppy Parade",
+      "description": "Yay pups!",
+      "location": "Puptown ",
+      "date": "2019-02-02T23:27:00.000Z",
+      "time": "1:00",
+      "attendees": []
+    },
+    {
+      "id": 84381,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "community",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "CSR",
+      "description": "Socialism",
+      "location": "The World",
+      "date": "2020-04-02T22:22:00.000Z",
+      "time": "17:00",
+      "attendees": []
+    },
+    {
+      "id": 16583,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "eqewwddwfd",
+      "description": "wff",
+      "location": "iukj",
+      "date": "2020-04-17T22:25:00.000Z",
+      "time": "13:00",
+      "attendees": []
+    },
+    {
+      "id": 69822,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "housing",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "sdsSCSAVS",
+      "description": "VD",
+      "location": "VDAVDS",
+      "date": "2020-04-01T22:31:00.000Z",
+      "time": "15:00",
+      "attendees": []
+    },
+    {
+      "id": 94284,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Plant a tree",
+      "description": "We would love to plant a tree",
+      "location": "nigeria",
+      "date": "2020-04-10T22:38:00.000Z",
+      "time": "15:00",
+      "attendees": []
+    },
+    {
+      "id": 46450,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
+    },
+    {
+      "id": 10963,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "animal welfare",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "sdsds",
+      "description": "dssds",
+      "location": "dss",
+      "date": "2020-04-01T22:43:00.000Z",
+      "time": "15:00",
+      "attendees": []
+    },
+    {
+      "id": 86812,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "sustainability",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "dwfeqef",
+      "description": "feewf",
+      "location": "efewdfe",
+      "date": "2020-04-23T22:44:00.000Z",
+      "time": "13:00",
+      "attendees": []
+    },
+    {
+      "id": 72424,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "sustainability",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "adwd",
+      "description": "dada",
+      "location": "sfdf",
+      "date": "2020-04-07T23:04:00.000Z",
+      "time": "16:00",
+      "attendees": []
+    },
+    {
+      "id": 44149,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "asd",
+      "description": "dsa",
+      "location": "sa",
+      "date": "2020-04-24T23:09:00.000Z",
+      "time": "14:00",
+      "attendees": []
+    },
+    {
+      "id": 42549,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "community",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
+    },
+    {
+      "id": 23543,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "animal welfare",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "cscccwsc",
+      "description": "cdavac",
+      "location": "cadc",
+      "date": "2020-04-03T23:13:00.000Z",
+      "time": "7:00",
+      "attendees": []
+    }
+  ]
+}
