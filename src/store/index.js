@@ -4,6 +4,7 @@ import EventService from "@/services/EventService.js";
 // the * below is serving as an import for all items inside the user data we imported from the modules
 import * as user from '@/store/modules/user.js'
 import * as event from '@/store/modules/event.js'
+import * as notification from '@/store/modules/notification.js'
 
 Vue.use(Vuex);
 
@@ -80,7 +81,8 @@ export default new Vuex.Store({
   modules: {
     // as imported above now im telling vuex to use this module
     user,
-    event
+    event,
+    notification
   },
   // declaring the getters, now we shall access this in our desired component see EventCreate
   getters: {

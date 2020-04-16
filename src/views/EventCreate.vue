@@ -73,9 +73,7 @@ export default {
           })
           this.event = this.createFreshEventObject()
         })
-        .catch((error) => {
-          console.log('There was a problem creating your event.' + error)
-        })
+        // .catch((error) => {})
     },
     createFreshEventObject() {
       //getting whatever user is sored within our state

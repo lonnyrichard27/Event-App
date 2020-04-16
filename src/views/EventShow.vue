@@ -23,13 +23,17 @@
 </template>
 
 <script>
+// mapState is an helper
 import { mapState } from "vuex";
 
 export default {
   props: ['id'],
   created() {
-    // we're adding 'event' before the ferchEvent because we have set the namespaced to true in the event.js module we should do this in all of our components and views but we're doing it here for demo sake
-    this.$store.dispatch("event/fetchEvent", this.id)
+    // we're adding 'event' before the fetchEvent because we have set the namespaced to true in the event.js module we should do this in all of our components and views but we're doing it here for demo sake
+    
+    // this.$store.dispatch("event/fetchEvent", this.id)
+
+    this.$store.dispatch("fetchEvent", this.id)
 },
 
 // here's the original access from the state the ones below are accessed from a folder in the module folder 

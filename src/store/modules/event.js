@@ -1,7 +1,7 @@
 import EventService from "@/services/EventService.js";
 
 // ensures that all mutations, Actions and Getters will be namespaced under 'event'
-export const namespaced = true
+// export const namespaced = true
 
 export const state = {
     user: {id: 'abc123', name: 'Adam Jahr'},
@@ -33,12 +33,25 @@ export const state = {
   }
   export const actions = {
     // commit in this parameter here gives us access to our mutations that we set
-    createEvent({ commit }, event) {
+    createEvent({ commit, dispatch }, event) {
      return EventService.postEvent(event).then(() =>{
       commit('ADD_EVENT', event)
+      const notification = {
+        type: 'success',
+        message: 'Your event has been created!'
+      }
+      dispatch('notification/add', notification, { root: true })
+      .catch(error => {
+        const notification = {
+          type: 'error',
+          message: 'There was a problem creating your event: ' + error.message
+        }
+        dispatch('notification/add', notification, { root: true })
+        throw error
+      })
      })
     },
-    fetchEvents({ commit }, { perPage, page }) {
+    fetchEvents({ commit, dispatch }, { perPage, page }) {
       EventService.getEvents( perPage, page )
       .then(response => {
         // in this console.log we are printing the total events as seen in the network panel on the browsers devtools cos we want the 'next page link' to stop show on each page meaning we want it to stop when it reaches a particular page
@@ -50,11 +63,15 @@ export const state = {
           commit('SET_EVENTS', response.data)
       })
       .catch(error => {
-          console.log('There was an error:' + error.response)
+          const notification = {
+            type: 'error',
+            message: 'There was a problem fetching events' + error.message
+          }
+          dispatch('notification/add', notification, { root: true })
       })
     },
     // the function or method below is preventing api to show event details to be called twice
-      fetchEvent({ commit, getters }, id) {
+      fetchEvent({ commit, getters, dispatch }, id) {
 // above we're accessing the getters by adding it as a params
         var event = getters.getEventById(id)
         // if we find that event commit it otherwise make the API call
@@ -66,8 +83,12 @@ export const state = {
           commit('SET_EVENT', response.data)
         })
         .catch(error => {
-          console.log('There was an error:', error.response)
-        })
+          const notification = {
+            type: 'error',
+            message: 'There was a problem fetching events' + error.message
+          }
+          dispatch('notification/add', notification, { root: true })
+      })
       }
     }
   }
