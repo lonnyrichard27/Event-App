@@ -28,9 +28,17 @@ import { mapState } from "vuex";
 export default {
   props: ['id'],
   created() {
-    this.$store.dispatch("fetchEvent", this.id)
+    // we're adding 'event' before the ferchEvent because we have set the namespaced to true in the event.js module we should do this in all of our components and views but we're doing it here for demo sake
+    this.$store.dispatch("event/fetchEvent", this.id)
 },
-computed: mapState(['event'])
+
+// here's the original access from the state the ones below are accessed from a folder in the module folder 
+// computed: mapState(['event'])
+
+// below we are accessing from the 'event' module but instead pof changing event in all of our code we make it an object and map it through
+computed: mapState({
+  event: state => state.event.event
+})
   
 }
 </script>

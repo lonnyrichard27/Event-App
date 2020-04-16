@@ -1,16 +1,10 @@
-import Vue from "vue";
-import Vuex from "vuex";
 import EventService from "@/services/EventService.js";
-// the * below is serving as an import for all items inside the user data we imported from the modules
-import * as user from '@/store/modules/user.js'
-import * as event from '@/store/modules/event.js'
 
-Vue.use(Vuex);
+// ensures that all mutations, Actions and Getters will be namespaced under 'event'
+export const namespaced = true
 
-export default new Vuex.Store({
-  state: {
+export const state = {
     user: {id: 'abc123', name: 'Adam Jahr'},
-    categories: ['sustainability', 'nature', 'animal welfare', 'housing', 'education', 'food', 'community'],
     todos: [
       { id: 1, text: '...', done: true },
       { id: 2, text: '...', done: false },
@@ -20,8 +14,8 @@ export default new Vuex.Store({
     events: [],
     eventsTotal: 0,
     event: {}
-  },
-  mutations: {
+  }
+  export const mutations = {
     // the 'events' being passed in as a parameter is a payload
     ADD_EVENT(state,events){
       // pushing the event that we just got
@@ -36,8 +30,8 @@ export default new Vuex.Store({
     SET_EVENT(state, event) {
       state.event = event
     }
-  },
-  actions: {
+  }
+  export const actions = {
     // commit in this parameter here gives us access to our mutations that we set
     createEvent({ commit }, event) {
      return EventService.postEvent(event).then(() =>{
@@ -76,14 +70,9 @@ export default new Vuex.Store({
         })
       }
     }
-  },
-  modules: {
-    // as imported above now im telling vuex to use this module
-    user,
-    event
-  },
+  }
   // declaring the getters, now we shall access this in our desired component see EventCreate
-  getters: {
+  export const getters = {
     // preventing api to show event details to be called twice
     getEventById: state => id => {
       return state.events.find(event => event.id === id)
@@ -100,4 +89,3 @@ export default new Vuex.Store({
       return state.todos.filter(todo => !todo.done)
     }
   }
-})
