@@ -3,6 +3,7 @@
       <div class="event-header">
         <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
         <h1 class="title">{{ event.title }}</h1>
+        <!-- the code below is a shorthand for a conditional statement stating that if the user has a name the system should show and then if not it should display an empty string -->
         <h5>Organized by {{ event.organizer.name ? event.organizer.name : '' }}</h5>
         <h5>Category: {{ event.category }}</h5>
       </div>
@@ -22,23 +23,14 @@
 </template>
 
 <script>
-import EventService from "@/services/EventService.js";
+import { mapState } from "vuex";
+
 export default {
   props: ['id'],
-  data () {
-    return {
-      event: {}
-    }
-  }, 
-      created() {
-      EventService.getEvent(this.id)
-      .then(response => {
-        this.event = response.data
-      })
-      .catch(error => {
-        console.log('there was an error:', error.response)
-      })
-    }
+  created() {
+    this.$store.dispatch("fetchEvent", this.id)
+},
+computed: mapState(['event'])
   
 }
 </script>
